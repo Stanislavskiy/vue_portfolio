@@ -6,7 +6,6 @@ yarn-error.log
 media 
 db.sqlite3
 
-
 # Editor directories and files
 .idea
 .vscode
