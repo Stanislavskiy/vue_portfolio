@@ -8,6 +8,7 @@ django = "*"
 django-rest-framework = "*"
 pillow = "*"
 "django-admin-sortable2" = "*"
+django-cors-headers = "*"
 
 [dev-packages]
 pylint = "*"

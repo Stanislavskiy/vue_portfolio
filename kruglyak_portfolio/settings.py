@@ -25,6 +25,7 @@ SECRET_KEY = '6%-_h@-wggf4jjlmnc)u47&b95)79*lkygm+*6c8v@xf(+%$7l'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+# TODO: Изменить на production
 ALLOWED_HOSTS = []
 
 
@@ -39,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'adminsortable2',
+    'corsheaders',
 
     # Project apps
     'photo'
@@ -136,3 +138,13 @@ STATICFILES_FINDERS = (
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
 MEDIA_URL = '/media/'
+
+# TODO: Изменить на production
+# A list of origin hostnames that are authorized to make cross-site HTTP requests
+CORS_ORIGIN_WHITELIST = (
+    # default front-end dev server
+    'localhost:8080',
+
+    # default backend dev server
+    '127.0.0.1:8000'
+)
