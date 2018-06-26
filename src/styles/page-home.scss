@@ -1,0 +1,63 @@
+@import "./mixins";
+@import "./variables";
+
+.page-home {
+  @include flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  box-sizing: border-box;
+  height: 100vh;
+  color: $white;
+
+  &__center {
+    margin-left: 15%;
+  }
+
+  &__title {
+    margin: 0;
+    line-height: 3rem;
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
+  }
+
+  &__description {
+    font-size: 1.25rem;
+    line-height: 1.25rem;
+    margin: $default-margin 0 0 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5em;
+    opacity: 0.8;
+  }
+
+  &__button {
+    margin-top: $default-margin + 0.5rem;
+    box-sizing: border-box;
+    width: 9.6875rem;
+    height: 2.75rem;
+    background: none;
+    border: 1px solid $yellow;
+    border-radius: 2px;
+    color: $yellow;
+    font-size: 0.6875rem;
+    text-transform: uppercase;
+    letter-spacing: 0em;
+    cursor: pointer;
+    @include transition(all, 0.1s, ease-in);
+
+    &:hover {
+      background-color: $button-bg-hover;
+      color: $black;
+    }
+
+    &:active {
+      background-color: $button-bg-active;
+      border-color: $button-bg-active;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+}

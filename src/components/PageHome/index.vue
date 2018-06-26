@@ -1,9 +1,11 @@
 <template>
   <div id="pageHome" class="page-home">
     <top-nav />
-    <h1 class="page-home__title">Vladislav Kruglyak</h1>
-    <h3 class="page-home__description">Photographer</h3>
-    <button class="page-home__button">Watch portfolio</button>
+    <div class="page-home__center">
+      <h1 class="page-home__title font-bold">Vladislav Kruglyak</h1>
+      <h3 class="page-home__description font-thin">Photographer</h3>
+      <button class="page-home__button font-regular">Watch portfolio</button>
+    </div>
     <locale />
   </div>
 </template>
@@ -16,4 +18,9 @@ export default {
   components: { TopNav, Locale }
 };
 </script>
+
+<style lang="scss" scoped>
+@import "../../styles/font";
+@import "../../styles/page-home";
+</style>
 

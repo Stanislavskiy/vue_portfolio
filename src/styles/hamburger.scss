@@ -1,0 +1,40 @@
+@import "./mixins";
+@import "./variables";
+
+.hamburger {
+  @include flex;
+  @include transition(all, 0.3s, ease-in);
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  justify-content: space-between;
+  width: $top-nav-height;
+  height: $top-nav-height;
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
+  cursor: pointer;
+  position: relative;
+
+  &__item {
+    width: $hamburger-item-width;
+    height: 1px;
+    background: $white;
+    @include transition(all, 0.2s, ease-in);
+  }
+
+  &_opened {
+    & .hamburger__item {
+      &:first-of-type {
+        transform: rotate(-45deg) translate(-7px, -7px);
+        -webkit-transform: rotate(-45deg) translate(-6px, 6px);
+      }
+      &:last-of-type {
+        transform: rotate(45deg) translate(-7px, -7px);
+        -webkit-transform: rotate(45deg) translate(-7px, -7px);
+      }
+      &:nth-child(2) {
+        opacity: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,43 @@
+@import "./mixins";
+@import "./variables";
+
+.top-nav {
+  @include flex;
+  box-sizing: border-box;
+  margin-top: $default-margin;
+  padding: 0 $default-margin;
+  width: 100%;
+  height: $top-nav-height;
+  align-items: center;
+  justify-content: space-between;
+  color: $white;
+  overflow: hidden;
+
+  &__logo {
+    @include no-select;
+    @include flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-sizing: border-box;
+    border: 1px solid $white;
+    color: $white;
+    width: $top-nav-height;
+    height: $top-nav-height;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    border-radius: 2px;
+
+    &:hover {
+      color: $black;
+      background: $button-bg-hover;
+      border: none;
+    }
+
+    &:active {
+      color: $black;
+      background: $button-bg-active;
+      border: none;
+    }
+  }
+}

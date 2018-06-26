@@ -1,6 +1,8 @@
 <template>
-  <div id="app">
-    <router-view />
+  <div id="app" class="app">
+    <transition name="fade">
+      <router-view />
+    </transition>
   </div>
 </template>
 
@@ -9,3 +11,8 @@ export default {
   name: "app"
 };
 </script>
+
+<style lang="scss" scoped>
+@import "./styles/app";
+@import "./styles/transition";
+</style>
