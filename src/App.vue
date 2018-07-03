@@ -1,14 +1,17 @@
 <template>
   <div id="app" class="app">
-    <transition name="fade">
+    <!-- <transition name="fade"> -->
       <router-view />
-    </transition>
+    <!-- </transition> -->
   </div>
 </template>
 
 <script>
 export default {
-  name: "app"
+  name: "app",
+  mounted() {
+    this.$store.dispatch("loadPhotos");
+  }
 };
 </script>
 

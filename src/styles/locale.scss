@@ -2,17 +2,6 @@
 @import "./mixins";
 
 .locale {
-  @include flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  position: static;
-  width: 100%;
-  box-sizing: border-box;
-  text-align: right;
-  height: $top-nav-height;
-  margin-bottom: $default-margin;
-  padding-right: $default-margin;
-
   &__button {
     color: $white;
     text-decoration: none;

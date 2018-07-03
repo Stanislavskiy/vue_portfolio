@@ -2,17 +2,7 @@
 @import "./variables";
 
 .page-home {
-  @include flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
-  box-sizing: border-box;
-  height: 100vh;
   color: $white;
-
-  &__center {
-    margin-left: 15%;
-  }
 
   &__title {
     margin: 0;
@@ -44,7 +34,7 @@
     text-transform: uppercase;
     letter-spacing: 0em;
     cursor: pointer;
-    @include transition(all, 0.1s, ease-in);
+    @include transition(all, 0.15s, ease-in);
 
     &:hover {
       background-color: $button-bg-hover;

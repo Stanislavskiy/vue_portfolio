@@ -1,7 +1,7 @@
 <template>
   <div id="pageHome" class="page-home">
     <top-nav />
-    <div class="page-home__center">
+    <div class="content">
       <h1 class="page-home__title font-bold">Vladislav Kruglyak</h1>
       <h3 class="page-home__description font-thin">Photographer</h3>
       <button class="page-home__button font-regular">Watch portfolio</button>
@@ -22,5 +22,6 @@ export default {
 <style lang="scss" scoped>
 @import "../../styles/font";
 @import "../../styles/page-home";
+@import "../../styles/content";
 </style>
 

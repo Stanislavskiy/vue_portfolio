@@ -1,0 +1,11 @@
+@import "./mixins";
+@import "./variables";
+
+.content {
+  @include flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-left: $default-content-margin;
+  height: $content-height;
+}

@@ -2,6 +2,7 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import PageHome from "../components/PageHome";
 import PageMenu from "../components/PageMenu";
+import PagePortfolio from "../components/PagePortfolio";
 
 Vue.use(VueRouter);
 
@@ -16,6 +17,11 @@ export default new VueRouter({
       path: "/menu",
       name: "menu",
       component: PageMenu
+    },
+    {
+      path: "/portfolio",
+      name: "portfolio",
+      component: PagePortfolio
     }
   ]
 });

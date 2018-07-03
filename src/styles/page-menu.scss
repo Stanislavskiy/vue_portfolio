@@ -2,16 +2,25 @@
 @import "./variables";
 
 .page-menu {
-  @include flex;
-  flex-direction: column;
-  justify-content: space-between;
-
-  &__menu {
-    margin-top: 20vh;
-  }
   &__item {
+    display: inline-block;
+    text-decoration: none;
     font-size: 1.5rem;
     letter-spacing: 0.025em;
     color: $white;
+    cursor: pointer;
+    @include transition(all, 0.15s, ease-in);
+
+    &:not(:first-of-type) {
+      margin-top: 3.185rem;
+    }
+
+    &:hover {
+      color: $yellow;
+      // font-weight: bold;
+      // font-size: 1.7rem;
+      transform: translate(25%) scale(1.5, 1.5);
+      -webkit-transform: translate(25%) scale(1.5, 1.5);
+    }
   }
 }

@@ -1,0 +1,12 @@
+@import "./variables";
+@import "./mixins";
+
+.footer {
+  @include flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  text-align: right;
+  height: $top-nav-height;
+  margin-bottom: $default-margin;
+  padding-right: $default-margin;
+}

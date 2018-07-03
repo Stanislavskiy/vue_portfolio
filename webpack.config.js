@@ -1,6 +1,13 @@
 var path = require("path");
 var webpack = require("webpack");
 
+const API_URL_DEV = "http://127.0.0.1:8000/api/v1";
+// TODO: define
+const API_URL_PROD = "";
+
+const DEVELOPMENT = process.env.NODE_ENV === "development";
+const API_URL = DEVELOPMENT ? API_URL_DEV : API_URL_PROD;
+
 module.exports = {
   entry: "./src/main.js",
   output: {
@@ -8,6 +15,13 @@ module.exports = {
     publicPath: "/dist/",
     filename: "build.js"
   },
+  plugins: [
+    // new webpack.EnvironmentPlugin("NODE_ENV"),
+    new webpack.DefinePlugin({
+      API_URL: JSON.stringify(API_URL),
+      DEVELOPMENT: DEVELOPMENT
+    })
+  ],
   module: {
     rules: [
       {

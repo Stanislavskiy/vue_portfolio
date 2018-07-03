@@ -7,3 +7,6 @@ $button-bg-active: hsl(60, 88%, 38%);
 $default-margin: 3rem;
 $top-nav-height: 2.5rem;
 $hamburger-item-width: 1.75rem;
+$default-content-margin: 15%;
+// 100% - ($top-nav-height + $default-margin)*2
+$content-height: calc(100vh - 11rem);

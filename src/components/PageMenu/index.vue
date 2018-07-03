@@ -1,12 +1,22 @@
 <template>
   <div id="pageMenu" class="page-menu">
     <top-nav />
-    <div class="page-menu__menu">
-      <div class="page-menu__item font-light">Home</div>
-      <div class="page-menu__item font-light">Portfolio</div>
-      <div class="page-menu__item font-light">About me</div>
-      <div class="page-menu__item font-light">Contact</div>
-      <div class="page-menu__item font-light">Website</div>
+    <div class="content">
+      <router-link 
+        to="/" 
+        class="page-menu__item font-light font-light_hover_bold"
+      >
+        Home
+      </router-link>
+      <router-link 
+        :to="{name: 'portfolio'}" 
+        class="page-menu__item font-light font-light_hover_bold"
+      >
+        Portfolio
+      </router-link>
+      <router-link class="page-menu__item font-light font-light_hover_bold">About me</router-link>
+      <router-link class="page-menu__item font-light font-light_hover_bold">Contact</router-link>
+      <router-link class="page-menu__item font-light font-light_hover_bold">Website</router-link>
     </div>  
   </div>
 </template>
@@ -22,5 +32,6 @@ export default {
 <style lang="scss" scoped>
 @import "../../styles/font";
 @import "../../styles/page-menu";
+@import "../../styles/content";
 </style>
 
