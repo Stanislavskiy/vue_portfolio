@@ -7,7 +7,7 @@
     >
     К
     </div>
-    <!-- <img src="assets/menu.png" alt="img" class="top-nav__menu"> -->
+    <slot></slot>
     <div 
       class="hamburger" 
       @click="toggleMenu()"

@@ -5,6 +5,10 @@ const mutations = {
 
   updateCategories(state, categories) {
     state.categories = categories;
+  },
+
+  updateCurrentCategory(state, category) {
+    state.currentCategory = category;
   }
 };
 

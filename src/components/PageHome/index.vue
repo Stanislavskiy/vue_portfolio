@@ -4,7 +4,13 @@
     <div class="content">
       <h1 class="page-home__title font-bold">Vladislav Kruglyak</h1>
       <h3 class="page-home__description font-thin">Photographer</h3>
-      <button class="page-home__button font-regular">Watch portfolio</button>
+      <router-link 
+        class="page-home__button font-regular"
+        :to="{name: 'portfolio'}"
+        tag="button"
+      >
+        Watch portfolio
+      </router-link>
     </div>
     <locale />
   </div>

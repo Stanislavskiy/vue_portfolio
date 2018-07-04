@@ -1,10 +1,13 @@
 import axios from "axios";
 
-export function getPhotos() {
-  const PHOTO_URL = `${API_URL}/photos/`;
-
+export function getPhotos(category = "all") {
+  const PHOTO_URL = `${API_URL}/photos/by_category/`;
   return axios
-    .get(PHOTO_URL)
+    .get(PHOTO_URL, {
+      params: {
+        category
+      }
+    })
     .then(response => {
       DEVELOPMENT && console.log(`--> PHOTOS: SUCCESS.`);
       // Возвращаем данные

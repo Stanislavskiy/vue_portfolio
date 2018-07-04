@@ -14,9 +14,9 @@
       >
         Portfolio
       </router-link>
-      <router-link class="page-menu__item font-light font-light_hover_bold">About me</router-link>
+      <!-- <router-link class="page-menu__item font-light font-light_hover_bold">About me</router-link>
       <router-link class="page-menu__item font-light font-light_hover_bold">Contact</router-link>
-      <router-link class="page-menu__item font-light font-light_hover_bold">Website</router-link>
+      <router-link class="page-menu__item font-light font-light_hover_bold">Website</router-link> -->
     </div>  
   </div>
 </template>
