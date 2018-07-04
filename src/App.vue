@@ -10,7 +10,7 @@
 export default {
   name: "app",
   mounted() {
-    this.$store.dispatch("loadPhotos");
+    this.$store.dispatch("initGallery");
   }
 };
 </script>

@@ -3,6 +3,8 @@
 
 .page-home {
   color: $white;
+  height: 100vh;
+  overflow: hidden;
 
   &__title {
     margin: 0;

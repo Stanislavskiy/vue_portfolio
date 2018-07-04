@@ -1,0 +1,13 @@
+.page-portfolio {
+  overflow-y: scroll;
+  background: rgba(#000000, 0.8);
+
+  /* important for scrolling 
+  without scrollbar */
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+
+  right: -17px; /* Increase/Decrease this value for cross-browser compatibility */
+}

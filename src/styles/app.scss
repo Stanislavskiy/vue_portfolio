@@ -1,6 +1,10 @@
 .app {
   background: url("~/assets/bg.jpg") no-repeat center / cover;
   box-sizing: border-box;
+
+  /* important for portfolio page 
+  scrolling without scrollbar */
   height: 100vh;
   overflow: hidden;
+  position: relative;
 }

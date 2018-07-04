@@ -1,0 +1,12 @@
+@import "./mixins";
+@import "./variables";
+
+.gallery {
+  margin-top: $default-margin;
+
+  &__item {
+    display: inline-block;
+    width: 25%;
+    height: auto;
+  }
+}
