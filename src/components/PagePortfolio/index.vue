@@ -1,22 +1,9 @@
 <template>
   <div id="pagePortfolio" class="page-portfolio">
-    <top-nav> 
-      <div class="page-portfolio__categories">
-        <a 
-          class="page-portfolio__category font-light" 
-          href="#"
-          v-for="category in categories"
-          :key="category.id"
-          :class="{'page-portfolio__category_active': category.name === currentCategory}"
-          @click="loadPhotos(category.name)" 
-        >
-          {{category.name}}
-        </a>
-      </div>  
-    </top-nav>
     <gallery 
+      class="page-portfolio__gallery"
       :items="imageList"
-      @image-click="pushSlideImage"
+      @image-click="imageClicked"
     />
     <lightbox 
       :image="slideImage"
@@ -27,7 +14,6 @@
 
 <script>
 import Vue from "vue";
-import TopNav from "../TopNav";
 import Gallery from "../Gallery";
 import Lightbox from "../Lightbox";
 import { mapGetters, mapActions } from "vuex";
@@ -38,9 +24,9 @@ export default {
       slideImage: null
     };
   },
-  components: { TopNav, Gallery, Lightbox },
+  components: { Gallery, Lightbox },
   computed: {
-    ...mapGetters(["photos", "categories", "currentCategory"]),
+    ...mapGetters(["photos"]),
 
     imageList: function() {
       if (this.photos)
@@ -50,13 +36,22 @@ export default {
     }
   },
   methods: {
-    ...mapActions(["loadPhotos"]),
-    pushSlideImage(image) {
+    ...mapActions(["loadPhotos", "clearCategories", "loadCategories"]),
+    imageClicked(image) {
       const result = this.photos.find(item => {
         return item.small === image;
       });
       if (result.image) this.slideImage = result.image;
     }
+  },
+
+  mounted() {
+    this.loadCategories();
+  },
+
+  beforeRouteLeave(to, from, next) {
+    this.clearCategories();
+    next();
   }
 };
 </script>

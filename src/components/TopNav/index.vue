@@ -7,7 +7,18 @@
     >
     К
     </div>
-    <slot></slot>
+    <div v-if="items" class="top-nav__items">
+        <a 
+          class="top-nav__item font-light" 
+          href="#"
+          v-for="(item, i) in items"
+          :key="i"
+          :class="{'top-nav__item_active': item===activeItem}"
+          @click="itemClicked(item)" 
+        >
+          {{item}}
+        </a>
+      </div>  
     <div 
       class="hamburger" 
       @click="toggleMenu()"
@@ -22,23 +33,44 @@
 
 <script>
 export default {
+  data() {
+    return {
+      activeItem: this.defaultItem,
+      opened: false
+    };
+  },
   props: {
-    opened: {
-      type: Boolean,
-      default: false
-    },
     menuPath: {
       default: "menu/"
+    },
+    items: {
+      type: Array,
+      default: null
+    },
+    defaultItem: {
+      type: String,
+      default: null
     }
   },
   methods: {
     toggleMenu() {
       if (!this.opened) {
+        this.opened = true;
         this.$router.push(this.menuPath);
       } else {
+        this.opened = false;
         this.$router.go(-1);
       }
+    },
+    itemClicked(item) {
+      this.$emit("item-click", item);
+      this.activeItem = item;
     }
+  },
+
+  beforeRouteLeave(to, from, next) {
+    this.opened = false;
+    next();
   }
 };
 </script>

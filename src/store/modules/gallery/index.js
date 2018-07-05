@@ -3,14 +3,12 @@ import actions from "./actions";
 
 const state = {
   photos: null,
-  categories: null,
-  currentCategory: null
+  categories: null
 };
 
 const getters = {
   photos: state => state.photos,
-  categories: state => state.categories,
-  currentCategory: state => state.currentCategory
+  categories: state => state.categories
 };
 
 export default {

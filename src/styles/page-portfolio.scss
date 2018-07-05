@@ -14,28 +14,7 @@
 
   right: -17px; /* Increase/Decrease this value for cross-browser compatibility */
 
-  &__categories {
-    @include flex;
-    justify-content: flex-end;
-    align-items: center;
-    width: 100%;
-  }
-
-  &__category {
-    color: rgba($white, 0.55);
-    text-decoration: none;
-    margin-right: $default-margin;
-    font-size: 0.875rem;
-    text-transform: lowercase;
-    @include transition(all, 0.15s, ease-in);
-
-    &:hover {
-      color: $yellow;
-      transform: scale(1.2);
-    }
-
-    &_active {
-      color: $white;
-    }
+  &__gallery {
+    margin-top: $default-margin * 2 + $top-nav-height;
   }
 }

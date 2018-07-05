@@ -1,6 +1,5 @@
 <template>
   <div id="pageMenu" class="page-menu">
-    <top-nav opened />
     <div class="content">
       <router-link 
         to="/" 
@@ -20,14 +19,6 @@
     </div>  
   </div>
 </template>
-
-<script>
-import TopNav from "../TopNav";
-
-export default {
-  components: { TopNav }
-};
-</script>
 
 <style lang="scss" scoped>
 @import "../../styles/font";

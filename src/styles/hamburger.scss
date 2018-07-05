@@ -15,6 +15,10 @@
   cursor: pointer;
   position: relative;
 
+  &:hover .hamburger__item {
+    background: $yellow;
+  }
+
   &__item {
     width: $hamburger-item-width;
     height: 1px;
@@ -25,54 +29,16 @@
   &_opened {
     & .hamburger__item {
       &:first-of-type {
-        animation: topLine 0.3s ease-in;
-        animation-fill-mode: forwards;
-        -webkit-animation: topLine 0.3s ease-in;
-        -webkit-animation-fill-mode: forwards;
+        transform: rotate(-45deg) translate(-7px, -7px);
+        -webkit-transform: rotate(-45deg) translate(-6px, 6px);
       }
       &:last-of-type {
-        animation: bottomLine 0.3s ease-in;
-        animation-fill-mode: forwards;
-        -webkit-animation: bottomLine 0.3s ease-in;
-        -webkit-animation-fill-mode: forwards;
+        transform: rotate(45deg) translate(-7px, -7px);
+        -webkit-transform: rotate(45deg) translate(-7px, -7px);
       }
       &:nth-child(2) {
-        animation: midLine 0.3s ease-in;
-        animation-fill-mode: forwards;
-        -webkit-animation: midLine 0.3s ease-in;
-        -webkit-animation-fill-mode: forwards;
+        opacity: 0;
       }
     }
-  }
-}
-
-@keyframes topLine {
-  from {
-    transform: rotate(0deg) translate(0px, 0px);
-    -webkit-transform: rotate(0deg) translate(0px, 0px);
-  }
-  to {
-    transform: rotate(-45deg) translate(-7px, -7px);
-    -webkit-transform: rotate(-45deg) translate(-6px, 6px);
-  }
-}
-
-@keyframes bottomLine {
-  from {
-    transform: rotate(0deg) translate(0px, 0px);
-    -webkit-transform: rotate(0deg) translate(0px, 0px);
-  }
-  to {
-    transform: rotate(45deg) translate(-7px, -7px);
-    -webkit-transform: rotate(45deg) translate(-7px, -7px);
-  }
-}
-
-@keyframes midLine {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
   }
 }

@@ -4,7 +4,6 @@ const DEFAULT_CATEGORY = "all";
 
 const actions = {
   initGallery({ dispatch }) {
-    dispatch("loadCategories");
     dispatch("loadPhotos");
   },
 
@@ -13,13 +12,11 @@ const actions = {
       if (category === DEFAULT_CATEGORY) {
         getPhotos().then(result => {
           commit("updatePhotos", result);
-          commit("updateCurrentCategory", category);
           resolve();
         });
       } else {
         getPhotos(category).then(result => {
           commit("updatePhotos", result);
-          commit("updateCurrentCategory", category);
           resolve();
         });
       }
@@ -30,6 +27,10 @@ const actions = {
     getCategories().then(result => {
       commit("updateCategories", result);
     });
+  },
+
+  clearCategories({ commit }) {
+    commit("updateCategories", null);
   }
 };
 
