@@ -13,3 +13,5 @@ db.sqlite3
 *.ntvs*
 *.njsproj
 *.sln
+
+__pycache__

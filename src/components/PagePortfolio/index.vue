@@ -8,56 +8,59 @@
           v-for="category in categories"
           :key="category.id"
           :class="{'page-portfolio__category_active': category.name === currentCategory}"
-          @click="changeCategory(category.name)" 
+          @click="loadPhotos(category.name)" 
         >
           {{category.name}}
         </a>
       </div>  
     </top-nav>
-    <transition-group 
-      name="list-complete" 
-      tag="div"
-      v-masonry 
-      transition-duration="0.3s" 
-      item-selector=".gallery__item" 
-      class="gallery" 
-    >
-      <img 
-        v-masonry-tile
-        v-for="photo in photos"
-        :key="photo.id"
-        class="gallery__item" 
-        :src="photo.image" 
-        alt="photo"
-      >
-    </transition-group>
+    <gallery 
+      :items="imageList"
+      @image-click="pushSlideImage"
+    />
+    <lightbox 
+      :image="slideImage"
+      @close="slideImage=null" 
+    />
   </div>
 </template>
 
 <script>
 import Vue from "vue";
 import TopNav from "../TopNav";
+import Gallery from "../Gallery";
+import Lightbox from "../Lightbox";
 import { mapGetters, mapActions } from "vuex";
 
 export default {
-  components: { TopNav },
+  data() {
+    return {
+      slideImage: null
+    };
+  },
+  components: { TopNav, Gallery, Lightbox },
   computed: {
-    ...mapGetters(["photos", "categories", "currentCategory"])
+    ...mapGetters(["photos", "categories", "currentCategory"]),
+
+    imageList: function() {
+      if (this.photos)
+        return this.photos.map(item => {
+          return item.small || item.image;
+        });
+    }
   },
   methods: {
     ...mapActions(["loadPhotos"]),
-    changeCategory(name) {
-      this.loadPhotos(name).then(() => {
-        // TODO: Исправить костыль
-        setTimeout(this.$redrawVueMasonry, 500);
+    pushSlideImage(image) {
+      const result = this.photos.find(item => {
+        return item.small === image;
       });
+      if (result.image) this.slideImage = result.image;
     }
   }
 };
 </script>
 
 <style lang="scss" scoped>
-@import "../../styles/transition";
-@import "../../styles/gallery";
 @import "../../styles/page-portfolio";
 </style>
