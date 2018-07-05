@@ -11,7 +11,7 @@
     <div 
       class="hamburger" 
       @click="toggleMenu()"
-      :class="{'hamburger_opened': menuOpened}"
+      :class="{'hamburger_opened': opened}"
     >
       <div class="hamburger__item"></div>
       <div class="hamburger__item"></div>
@@ -22,21 +22,21 @@
 
 <script>
 export default {
-  data() {
-    return {
-      menuOpened: false
-    };
+  props: {
+    opened: {
+      type: Boolean,
+      default: false
+    },
+    menuPath: {
+      default: "menu/"
+    }
   },
   methods: {
     toggleMenu() {
-      if (!this.menuOpened) {
-        this.$router.push({ name: "menu" });
-        this.menuOpened = true;
+      if (!this.opened) {
+        this.$router.push(this.menuPath);
       } else {
-        if (this.menuOpened) {
-          this.$router.go(-1);
-          this.menuOpened = false;
-        }
+        this.$router.go(-1);
       }
     }
   }

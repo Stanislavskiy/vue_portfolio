@@ -1,6 +1,6 @@
 <template>
   <div id="pageMenu" class="page-menu">
-    <top-nav />
+    <top-nav opened />
     <div class="content">
       <router-link 
         to="/" 
