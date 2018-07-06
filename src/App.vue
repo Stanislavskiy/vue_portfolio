@@ -3,7 +3,7 @@
     <div class="app__video">
       <video width="100%" height="auto" preload="auto" autoplay="autoplay"
       loop="loop" poster="">
-          <source src="assets/bg.mp4" type="video/mp4" />
+          <source src="assets/bg.mp4" type="video/mp4"></source>
           <!-- <source src="bg/daisy-stock-webm-video.webm" type="video/webm"></source> -->
       </video>
     </div>
