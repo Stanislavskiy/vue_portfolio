@@ -2,6 +2,7 @@
 @import "./variables";
 
 .gallery {
+  z-index: 2;
   &__item {
     display: inline-block;
     width: 25%;

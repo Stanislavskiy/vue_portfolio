@@ -2,11 +2,15 @@
   <div id="app" class="app">
     <top-nav 
       :items="menuItems"
-      defaultItem="all"
-      @item-click="loadPhotos" 
+      :opened="menuOpened"
+      :activeItem="menuActiveItem"
+      @item-click="menuItemClicked"
+      @hamburger-click="menuHamburgerClicked" 
+      @logo-click="menuLogoClicked"
     />
     <transition name="fade">
       <router-view />
+        <!-- @menu-item-click="this.menuOpened=false" -->
     </transition>
   </div>
 </template>
@@ -16,10 +20,15 @@ import TopNav from "./components/TopNav";
 import { mapGetters, mapActions } from "vuex";
 
 export default {
+  data() {
+    return {
+      menuActiveItem: "all"
+    };
+  },
   name: "app",
   components: { TopNav },
   computed: {
-    ...mapGetters(["categories"]),
+    ...mapGetters(["categories", "menuOpened"]),
     menuItems: function() {
       if (this.categories) {
         return this.categories.map(item => {
@@ -29,7 +38,24 @@ export default {
     }
   },
   methods: {
-    ...mapActions(["loadPhotos"])
+    ...mapActions(["loadPhotos"]),
+
+    menuItemClicked(name) {
+      this.loadPhotos(name);
+      this.menuActiveItem = name;
+    },
+
+    menuHamburgerClicked() {
+      if (!this.menuOpened) {
+        this.$router.push({ name: "menu" });
+      } else {
+        this.$router.go(-1);
+      }
+    },
+
+    menuLogoClicked() {
+      this.$router.push("/");
+    }
   },
   mounted() {
     this.$store.dispatch("initGallery");

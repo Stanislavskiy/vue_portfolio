@@ -1,9 +1,8 @@
 <template>
   <div id="topNav" class="top-nav">
     <div 
-      src="assets/logo.png" 
-      alt="img" class="top-nav__logo font-semibold" 
-      @click="$router.push('/')"
+      class="top-nav__logo font-semibold" 
+      @click="$emit('logo-click')"
     >
     К
     </div>
@@ -14,14 +13,14 @@
           v-for="(item, i) in items"
           :key="i"
           :class="{'top-nav__item_active': item===activeItem}"
-          @click="itemClicked(item)" 
+          @click="$emit('item-click', item)" 
         >
           {{item}}
         </a>
       </div>  
     <div 
       class="hamburger" 
-      @click="toggleMenu()"
+      @click="$emit('hamburger-click')"
       :class="{'hamburger_opened': opened}"
     >
       <div class="hamburger__item"></div>
@@ -35,42 +34,25 @@
 export default {
   data() {
     return {
-      activeItem: this.defaultItem,
-      opened: false
+      // activeItem: this.defaultItem
     };
   },
   props: {
-    menuPath: {
-      default: "menu/"
-    },
+    // pathName: {
+    //   default: "menu"
+    // },
     items: {
       type: Array,
       default: null
     },
-    defaultItem: {
+    activeItem: {
       type: String,
       default: null
-    }
-  },
-  methods: {
-    toggleMenu() {
-      if (!this.opened) {
-        this.opened = true;
-        this.$router.push(this.menuPath);
-      } else {
-        this.opened = false;
-        this.$router.go(-1);
-      }
     },
-    itemClicked(item) {
-      this.$emit("item-click", item);
-      this.activeItem = item;
+    opened: {
+      type: Boolean,
+      default: false
     }
-  },
-
-  beforeRouteLeave(to, from, next) {
-    this.opened = false;
-    next();
   }
 };
 </script>
