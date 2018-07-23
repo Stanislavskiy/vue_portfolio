@@ -18,6 +18,10 @@
   font-family: "MontserratSemiBold";
 }
 
+.font-extralight {
+  font-family: "MontserratExtraLight";
+}
+
 .font-bold {
   font-family: "MontserratBold";
 }
@@ -53,6 +57,13 @@
 @font-face {
   font-family: "MontserratSemiBold";
   src: url("~/assets/Montserrat-SemiBold.ttf");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "MontserratExtraLight";
+  src: url("~/assets/Montserrat-ExtraLight.ttf");
   font-style: normal;
   font-weight: normal;
 }

@@ -13,7 +13,25 @@
       >
         Portfolio
       </router-link>
-      <!-- <router-link class="page-menu__item font-light font-light_hover_bold">About me</router-link>
+      <router-link 
+        :to="{name: 'about'}"
+        class="page-menu__item font-light font-light_hover_bold"
+      >
+        About me
+      </router-link>
+      <router-link 
+        :to="{name: 'contact'}"
+        class="page-menu__item font-light font-light_hover_bold"
+      >
+        Contact
+      </router-link>
+      <router-link 
+        :to="{name: 'site'}"
+        class="page-menu__item font-light font-light_hover_bold"
+      >
+        Website
+      </router-link>
+      <!-- 
       <router-link class="page-menu__item font-light font-light_hover_bold">Contact</router-link>
       <router-link class="page-menu__item font-light font-light_hover_bold">Website</router-link> -->
     </div>  

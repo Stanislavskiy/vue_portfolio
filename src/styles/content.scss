@@ -8,4 +8,48 @@
   align-items: flex-start;
   margin-left: $default-content-margin;
   height: $content-height;
+  color: $white;
+
+  &__title {
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: $header-font-size;
+    margin: 0;
+  }
+
+  &__subheader {
+    text-transform: normal;
+    letter-spacing: 0.05em;
+    font-size: $description-font-size;
+    margin: $default-margin 0 0 0;
+  }
+
+  &__link {
+    text-transform: normal;
+    letter-spacing: 0.05em;
+    font-size: $description-font-size;
+    color: $white;
+    text-decoration: none;
+  }
+
+  &__link:hover {
+    color: $yellow;
+  }
+
+  &__description {
+    text-transform: normal;
+    margin: $default-margin 0 0 0;
+    width: 32.125rem;
+    font-size: $description-font-size;
+    line-height: 1.5rem;
+    letter-spacing: $description-spaccing;
+  }
+
+  &__line {
+    width: 6.5rem;
+    height: 1px;
+    background: $yellow;
+    display: block;
+    margin-top: $default-margin;
+  }
 }

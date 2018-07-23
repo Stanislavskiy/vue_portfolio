@@ -4,7 +4,7 @@
 .top-nav {
   @include flex;
   position: relative;
-  z-index: 1;
+  z-index: 5;
   box-sizing: border-box;
   margin-top: $default-margin;
   padding: 0 $default-margin;
@@ -14,6 +14,7 @@
   justify-content: space-between;
   color: $white;
   overflow: hidden;
+  @include transition(all, 0.15s, ease-in);
 
   &__logo {
     @include no-select;
@@ -24,8 +25,8 @@
     box-sizing: border-box;
     border: 1px solid $white;
     color: $white;
-    width: $top-nav-height;
-    height: $top-nav-height;
+    width: 2.3rem;
+    height: 2.3rem;
     text-transform: uppercase;
     font-size: 1.5rem;
     border-radius: 2px;

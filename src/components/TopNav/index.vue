@@ -1,5 +1,10 @@
 <template>
-  <div id="topNav" class="top-nav">
+  <div 
+    id="topNav"
+    ref="topNav" 
+    class="top-nav"
+    @scroll="windowScroll()"
+  >
     <div 
       class="top-nav__logo font-semibold" 
       @click="$emit('logo-click')"

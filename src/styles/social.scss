@@ -1,0 +1,41 @@
+@import "./variables";
+@import "./mixins";
+
+.social {
+  &__button {
+    display: block;
+    float: left;
+    margin-left: $default-margin;
+    width: 1.5rem;
+    height: 1.5rem;
+    @include transition(all, 0.15s, ease-in);
+
+    &:last-of-type {
+      margin-right: $default-margin/6;
+    }
+
+    &_icon_facebook {
+      background: url("~/assets/facebook.png") no-repeat center / cover;
+    }
+
+    &_icon_facebook:hover {
+      background: url("~/assets/facebook-active.png");
+    }
+
+    &_icon_instagram {
+      background: url("~/assets/instagram.png") no-repeat center / cover;
+    }
+
+    &_icon_instagram:hover {
+      background: url("~/assets/instagram-active.png");
+    }
+
+    &_icon_vk {
+      background: url("~/assets/vk.png") no-repeat center / cover;
+    }
+
+    &_icon_vk:hover {
+      background: url("~/assets/vk-active.png");
+    }
+  }
+}

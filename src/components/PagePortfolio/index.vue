@@ -1,7 +1,12 @@
 <template>
-  <div id="pagePortfolio" class="page-portfolio">
+  <div 
+    id="pagePortfolio" 
+    class="page-portfolio"
+    @scroll="windowScroll()"
+  >
     <gallery 
       class="page-portfolio__gallery"
+      ref="gallery"
       :items="imageList"
       @image-click="imageClicked"
     />
@@ -42,6 +47,22 @@ export default {
         return item.small === image;
       });
       if (result.image) this.slideImage = result.image;
+    },
+    checkMenu() {
+      let prevScrollpos = window.pageYOffset;
+      windowScroll();
+    },
+    windowScroll() {
+      const gallery = document.getElementById("gallery");
+      const nav = document.getElementById("topNav");
+      // TODO: Кнопка возвращения к меню
+      // const up = document.getElementById("upButton");
+      const top = gallery.getBoundingClientRect().top - gallery.offsetTop;
+      if (top < 0) {
+        nav.style.opacity = "0";
+      } else {
+        nav.style.opacity = "1";
+      }
     }
   },
 
