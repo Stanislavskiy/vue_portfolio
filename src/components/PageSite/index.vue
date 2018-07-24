@@ -29,6 +29,6 @@ export default {
 
 <style lang="scss" scoped>
 @import "../../styles/font";
-@import "../../styles/page-contact";
+@import "../../styles/page-site";
 @import "../../styles/content";
 </style>

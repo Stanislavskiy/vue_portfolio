@@ -12,7 +12,7 @@
     К
     </div>
     <div v-if="items" class="top-nav__items">
-        <a 
+        <button 
           class="top-nav__item font-light" 
           href="#"
           v-for="(item, i) in items"
@@ -21,7 +21,7 @@
           @click="$emit('item-click', item)" 
         >
           {{item}}
-        </a>
+        </button>
       </div>  
     <div 
       class="hamburger" 

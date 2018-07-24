@@ -12,7 +12,7 @@
     />
     <lightbox 
       :image="slideImage"
-      @close="slideImage=null" 
+      @close="slideImage=null"
     />
   </div>
 </template>

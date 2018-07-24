@@ -1,8 +1,8 @@
 <template>
   <div id="locale" class="locale footer font-thin">
-    <a href="#" class="locale__button">RU</a>
-    <a href="#" class="locale__button">EN</a>
-    <a href="#" class="locale__button">PL</a>
+    <button href="#" class="locale__button">RU</button>
+    <button href="#" class="locale__button locale__button_active">EN</button>
+    <button href="#" class="locale__button">PL</button>
   </div>
 </template>
 

@@ -4,8 +4,13 @@
 .page-menu {
   height: 100vh;
   overflow-x: hidden;
+  position: relative;
+  z-index: 5;
 
   &__item {
+    background: none;
+    border: none;
+    cursor: pointer;
     display: inline-block;
     text-decoration: none;
     font-size: 1.5rem;
@@ -16,6 +21,10 @@
 
     &:not(:first-of-type) {
       margin-top: 2.185rem;
+    }
+
+    &:focus {
+      outline: none;
     }
 
     &:hover {

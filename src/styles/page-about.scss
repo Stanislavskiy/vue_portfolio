@@ -2,4 +2,6 @@
 @import "./variables";
 
 .page-about {
+  position: relative;
+  z-index: 5;
 }

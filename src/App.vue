@@ -18,7 +18,7 @@
       @logo-click="menuLogoClicked"
     />
     <transition name="fade">
-      <router-view class="app__content" />
+      <router-view class="" />
         <!-- @menu-item-click="this.menuOpened=false" -->
     </transition>
   </div>

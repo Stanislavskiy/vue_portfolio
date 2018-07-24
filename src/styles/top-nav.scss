@@ -53,6 +53,9 @@
   }
 
   &__item {
+    background: none;
+    border: none;
+    cursor: pointer;
     color: rgba($white, 0.55);
     text-decoration: none;
     margin-right: $default-margin;
@@ -67,6 +70,10 @@
 
     &_active {
       color: $white;
+    }
+
+    &:focus {
+      outline: none;
     }
   }
 }

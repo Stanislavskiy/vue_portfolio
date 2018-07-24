@@ -1,27 +1,26 @@
 <template>
   <div id="pageHome" class="page-home">
-    <div class="content">
-      <h1 class="page-home__title font-bold">Vladislav Kruglyak</h1>
-      <h3 class="page-home__description font-thin">Photographer</h3>
+    <div class="content content_align_center content_margin_0">
+      <div>
+        <h1 class="page-home__title font-bold">
+          Vladislav Kruglyak
+        </h1>
+        <div class="page-home__description font-thin">
+          <div class="content__line content__line_margin_0"></div>
+          <h3>Photographer</h3>
+          <div class="content__line content__line_margin_0"></div>
+        </div>
+      </div>
       <router-link 
-        class="page-home__button font-regular"
+        class="page-home__button font-extralight"
         :to="{name: 'portfolio'}"
         tag="button"
       >
         Watch portfolio
       </router-link>
     </div>
-    <locale />
   </div>
 </template>
-
-<script>
-import Locale from "../Locale";
-
-export default {
-  components: { Locale }
-};
-</script>
 
 <style lang="scss" scoped>
 @import "../../styles/font";

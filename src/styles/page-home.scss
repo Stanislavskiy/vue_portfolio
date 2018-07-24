@@ -5,49 +5,72 @@
   // color: $white;
   height: 100vh;
   overflow: hidden;
+  position: relative;
+  z-index: 5;
 
   &__title {
+    text-align: center;
     margin: 0;
-    line-height: 3rem;
-    font-size: 2rem;
+    line-height: 1.875rem;
+    font-size: 1.7rem;
     text-transform: uppercase;
-    letter-spacing: 0.17em;
+    letter-spacing: 0.4em;
   }
 
   &__description {
-    font-size: 1rem;
+    text-align: center;
+    opacity: 0.7;
+    @include flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 0.875rem;
     line-height: 1.25rem;
-    margin: 2rem 0 0 0;
+    margin: 1rem 0 0 0;
     text-transform: uppercase;
-    letter-spacing: 0.5em;
+    letter-spacing: 0.3em;
     opacity: 0.8;
   }
 
+  // &__button {
+  //   margin-top: 2.5rem;
+  //   box-sizing: border-box;
+  //   width: 8.5rem;
+  //   height: 2.5rem;
+  //   background: none;
+  //   border: 1px solid $yellow;
+  //   border-radius: 2px;
+  //   color: $yellow;
+  //   font-size: 0.5rem;
+  //   text-transform: uppercase;
+  //   letter-spacing: 0em;
+  //   cursor: pointer;
+  //   letter-spacing: 0.15em;
+  //   @include transition(all, 0.15s, ease-in);
+
   &__button {
-    margin-top: 2.5rem;
-    box-sizing: border-box;
-    width: 8.5rem;
-    height: 2.5rem;
+    opacity: 0.2;
+    position: absolute;
+    margin-top: 5rem;
     background: none;
-    border: 1px solid $yellow;
-    border-radius: 2px;
-    color: $yellow;
-    font-size: 0.5rem;
+    border: none;
+    color: $white;
+    font-size: 0.6125rem;
     text-transform: uppercase;
     letter-spacing: 0em;
     cursor: pointer;
-    letter-spacing: 0.15em;
+    letter-spacing: 0.2em;
+    text-decoration: none;
+    text-align: center;
     @include transition(all, 0.15s, ease-in);
 
     &:hover {
-      background-color: $button-bg-hover;
-      color: $black;
-      letter-spacing: 0.2em;
-    }
-
-    &:active {
-      background-color: $button-bg-active;
-      border-color: $button-bg-active;
+      opacity: 1;
+      // background-color: $button-bg-hover;
+      // color: $black;
+      color: yellow;
+      transform: scale(1.1);
+      // letter-spacing: 0.4em;
     }
 
     &:focus {

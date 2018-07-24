@@ -3,6 +3,9 @@
 
 .locale {
   &__button {
+    background: none;
+    border: none;
+    cursor: pointer;
     color: $white;
     text-decoration: none;
     margin-left: $default-margin;
@@ -10,6 +13,14 @@
 
     &:last-of-type {
       margin-right: $default-margin/2;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &_active {
+      color: $yellow;
     }
   }
 }
