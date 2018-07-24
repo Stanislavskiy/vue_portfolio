@@ -1,14 +1,14 @@
 <template>
   <div id="app" class="app">
-    <div class="app__video-wrapper">
-      <div class="app__video">
-        <video width="100%" height="auto" preload="auto" autoplay="autoplay"
+    <!-- <div class="app__video-wrapper"> -->
+      <!-- <div > -->
+        <video class="app__video" width="100%" height="auto" preload="auto" autoplay="autoplay"
         loop="loop" poster="">
             <!-- TODO: Добавить форматы -->
             <source src="assets/bg.mp4" type="video/mp4"></source>
         </video>
-      </div>
-    </div>
+      <!-- </div> -->
+    <!-- </div> -->
     <top-nav 
       :items="menuItems"
       :opened="menuOpened"
