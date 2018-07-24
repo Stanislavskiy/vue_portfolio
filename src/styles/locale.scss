@@ -24,3 +24,14 @@
     }
   }
 }
+
+@media screen and (max-width: 620px) {
+  .locale {
+    padding: 0;
+    &__button {
+      &:last-of-type {
+        margin-right: $default-margin;
+      }
+    }
+  }
+}

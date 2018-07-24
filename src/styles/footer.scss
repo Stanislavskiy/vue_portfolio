@@ -10,3 +10,10 @@
   margin-bottom: $default-margin;
   padding-right: $default-margin;
 }
+
+@media screen and (max-width: 620px) {
+  .footer {
+    padding-right: 0;
+    justify-content: center;
+  }
+}

@@ -67,7 +67,11 @@
 }
 
 @media screen and (max-width: 620px) {
-  .content__line_hide_on_small {
-    display: none;
+  .content {
+    align-items: center;
+    margin-left: 0;
+    &__line_hide_on_small {
+      display: none;
+    }
   }
 }
