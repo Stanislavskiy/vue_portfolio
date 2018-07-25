@@ -14,7 +14,6 @@
       </div> 
       <div class="content__line"></div>
     </div>
-    <social />
   </div>
 </template>
 
