@@ -59,7 +59,6 @@ export default {
       // TODO: Кнопка возвращения к меню
       // const up = document.getElementById("upButton");
       const top = gallery.getBoundingClientRect().top - gallery.offsetTop;
-      console.log(top);
       if (top < -1) {
         nav.style.opacity = "0";
       } else {

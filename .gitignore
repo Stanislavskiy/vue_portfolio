@@ -5,7 +5,8 @@ npm-debug.log
 yarn-error.log
 media 
 db.sqlite3
-
+static/**
+!static/.gitkeep
 # Editor directories and files
 .idea
 .vscode

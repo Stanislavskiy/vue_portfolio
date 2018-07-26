@@ -5,9 +5,9 @@
         <h1 class="page-home__title font-bold">
           Vladislav Kruglyak
         </h1>
-        <div class="page-home__description font-thin">
+        <div class="page-home__description">
           <!-- <div class="content__line content__line_margin_0 content__line_hide_on_small"></div> -->
-          <h3>Photographer</h3>
+          <h3 class="font-thin">Photographer</h3>
           <!-- <div class="content__line content__line_margin_0 content__line_hide_on_small"></div> -->
         </div>
       </div>
