@@ -11,6 +11,7 @@
       @image-click="imageClicked"
     />
     <lightbox 
+      class="page-portfolio__lightbox page-portfolio__lightbox_hide_on_small"
       :image="slideImage"
       @close="slideImage=null"
     />
@@ -58,7 +59,8 @@ export default {
       // TODO: Кнопка возвращения к меню
       // const up = document.getElementById("upButton");
       const top = gallery.getBoundingClientRect().top - gallery.offsetTop;
-      if (top < 0) {
+      console.log(top);
+      if (top < -1) {
         nav.style.opacity = "0";
       } else {
         nav.style.opacity = "1";

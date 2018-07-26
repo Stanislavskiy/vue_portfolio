@@ -39,3 +39,16 @@
     }
   }
 }
+
+@media screen and (max-width: 620px) {
+  .social {
+    &__button {
+      &:first-of-type {
+        margin-left: 0;
+      }
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+  }
+}

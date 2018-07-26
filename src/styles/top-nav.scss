@@ -76,4 +76,29 @@
       outline: none;
     }
   }
+
+  &__list-view {
+    &_show_on_small {
+      display: none !important;
+    }
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .top-nav {
+    padding-left: 7%;
+    padding-right: 7%;
+    margin-top: 7%;
+    &__items {
+      &_hide_on_small {
+        display: none;
+      }
+    }
+
+    &__list-view {
+      &_show_on_small {
+        display: block !important;
+      }
+    }
+  }
 }

@@ -11,18 +11,27 @@
     >
     К
     </div>
-    <div v-if="items" class="top-nav__items">
-        <button 
-          class="top-nav__item font-light" 
-          href="#"
-          v-for="(item, i) in items"
-          :key="i"
-          :class="{'top-nav__item_active': item===activeItem}"
-          @click="$emit('item-click', item)" 
-        >
-          {{item}}
-        </button>
-      </div>  
+    <!-- small_screen -->
+    <list-view
+      v-if="items" 
+      class="top-nav__list-view top-nav__list-view_show_on_small font-light"
+      caption="Categories"
+      :items="items"
+      @item-click="listItemClicked"
+    />
+    <!-- large screen -->
+    <div v-if="items" class="top-nav__items top-nav__items_hide_on_small">
+      <button 
+        class="top-nav__item font-light" 
+        href="#"
+        v-for="(item, i) in items"
+        :key="i"
+        :class="{'top-nav__item_active': item===activeItem}"
+        @click="listItemClicked(item)" 
+      >
+        {{item}}
+      </button>
+    </div>  
     <div 
       class="hamburger" 
       @click="$emit('hamburger-click')"
@@ -36,11 +45,16 @@
 </template>
 
 <script>
+import ListView from "../ListView";
+
 export default {
   data() {
     return {
       // activeItem: this.defaultItem
     };
+  },
+  components: {
+    ListView
   },
   props: {
     // pathName: {
@@ -57,6 +71,11 @@ export default {
     opened: {
       type: Boolean,
       default: false
+    }
+  },
+  methods: {
+    listItemClicked(item) {
+      this.$emit("item-click", item);
     }
   }
 };

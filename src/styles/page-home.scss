@@ -32,7 +32,7 @@
     line-height: 1.25rem;
     margin: 1rem 0 0 0;
     text-transform: uppercase;
-    letter-spacing: 0.3em;
+    letter-spacing: 1em;
     opacity: 0.8;
   }
 
@@ -54,8 +54,9 @@
 
   &__button {
     opacity: 0.2;
-    position: absolute;
-    margin-top: 5rem;
+    position: fixed;
+    bottom: 3rem;
+    // margin-top: 5rem;
     background: none;
     border: none;
     color: $white;
@@ -85,13 +86,26 @@
 
 @media screen and (max-width: 620px) {
   .page-home {
+    align-items: flex-start;
     &__title {
       line-height: 3rem;
+      // align-self: flex-start;
       // width: 90%;
     }
 
+    &__description {
+      position: absolute;
+      width: 100%;
+      // text-transform: lowercase;
+      font-size: 0.6125rem;
+      text-align: center;
+      margin-top: 0;
+      letter-spacing: 1em;
+    }
+
     &__button {
-      margin-top: 11rem;
+      position: fixed;
+      bottom: 7%;
     }
   }
 }

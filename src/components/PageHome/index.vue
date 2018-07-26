@@ -6,9 +6,9 @@
           Vladislav Kruglyak
         </h1>
         <div class="page-home__description font-thin">
-          <div class="content__line content__line_margin_0 content__line_hide_on_small"></div>
+          <!-- <div class="content__line content__line_margin_0 content__line_hide_on_small"></div> -->
           <h3>Photographer</h3>
-          <div class="content__line content__line_margin_0 content__line_hide_on_small"></div>
+          <!-- <div class="content__line content__line_margin_0 content__line_hide_on_small"></div> -->
         </div>
       </div>
       <router-link 

@@ -20,3 +20,17 @@
     margin-top: $default-margin * 2 + $top-nav-height;
   }
 }
+
+@media screen and (max-width: 620px) {
+  .page-portfolio {
+    &__gallery {
+      margin-top: $gallery-margin-small;
+    }
+
+    &__lightbox {
+      &_hide_on_small {
+        display: none !important;
+      }
+    }
+  }
+}

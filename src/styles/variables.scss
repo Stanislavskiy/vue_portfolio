@@ -14,3 +14,5 @@ $header-font-size: 1.75rem;
 $description-font-size: 0.8rem;
 $description-spaccing: 0.075em;
 $black-overlay: rgba(#000000, 0.65);
+// 14% + $top-nav-height
+$gallery-margin-small: calc(14% + 2.5rem);
