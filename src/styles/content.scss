@@ -10,6 +10,10 @@
   height: $content-height;
   color: $white;
 
+  &_fade-in {
+    animation: fade-in 0.15s ease-in;
+  }
+
   &_align_center {
     align-items: center;
   }
@@ -92,5 +96,14 @@
       margin: 1rem 0 0 0;
       text-align: center;
     }
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }

@@ -22,11 +22,12 @@
         :to="{name: 'portfolio'}"
         tag="button"
       >
-        Watch portfolio
+        {{$t("pageHome.watch")}}
       </router-link>
     </div>
   </div>
 </template>
+
 
 <style lang="scss" scoped>
 @import "../../styles/font";
