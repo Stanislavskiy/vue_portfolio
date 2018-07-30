@@ -39,6 +39,10 @@
 @media screen and (max-width: 620px) {
   .app {
     overflow-y: auto;
-    background: "~/static/bg.jpg" no-repeat center / cover !important;
+    background: #000000;
+
+    &__video {
+      display: none !important;
+    }
   }
 }
