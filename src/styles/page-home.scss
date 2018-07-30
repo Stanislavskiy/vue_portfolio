@@ -53,7 +53,7 @@
   //   @include transition(all, 0.15s, ease-in);
 
   &__button {
-    opacity: 0.2;
+    opacity: 0.4;
     position: fixed;
     bottom: 3rem;
     // margin-top: 5rem;
@@ -67,7 +67,7 @@
     letter-spacing: 0.2em;
     text-decoration: none;
     text-align: center;
-    @include transition(all, 0.15s, ease-in);
+    @include transition(color, 0.15s, ease-in);
 
     &:hover {
       opacity: 1;
@@ -75,6 +75,7 @@
       // color: $black;
       color: yellow;
       transform: scale(1.1);
+      @include transition(transform, 0.15s, ease-in);
       // letter-spacing: 0.4em;
     }
 
