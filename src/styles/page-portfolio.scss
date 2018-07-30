@@ -27,10 +27,6 @@
     position: relative;
     right: 0;
 
-    &__gallery {
-      margin-top: $gallery-margin-small;
-    }
-
     &__lightbox {
       &_hide_on_small {
         display: none !important;
@@ -39,7 +35,7 @@
 
     &__gallery {
       position: relative;
-      z-index: 10;
+      z-index: 1;
       margin-top: $default-margin;
     }
   }
