@@ -3,7 +3,9 @@
 .app {
   // background: url("~/assets/bg.jpg") no-repeat center / cover;
   box-sizing: border-box;
-  background: transparent;
+  margin: 0;
+  padding: 0;
+  background: "~/static/bg.jpg" no-repeat center / cover;
 
   /* important for portfolio page 
   scrolling without scrollbar */
@@ -12,8 +14,8 @@
   position: relative;
 
   &__video {
-    position: absolute;
-    top: 0;
+    position: fixed;
+    top: -40px;
     left: 0;
     width: auto;
     min-width: 100%;
@@ -33,5 +35,11 @@
   &__content {
     position: relative;
     z-index: 1;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .app {
+    overflow-y: auto;
   }
 }

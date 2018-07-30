@@ -23,6 +23,10 @@
 
 @media screen and (max-width: 620px) {
   .page-portfolio {
+    overflow-y: unset;
+    position: relative;
+    right: 0;
+
     &__gallery {
       margin-top: $gallery-margin-small;
     }
@@ -31,6 +35,12 @@
       &_hide_on_small {
         display: none !important;
       }
+    }
+
+    &__gallery {
+      position: relative;
+      z-index: 10;
+      margin-top: $default-margin;
     }
   }
 }
