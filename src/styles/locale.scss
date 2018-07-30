@@ -28,6 +28,11 @@
 @media screen and (max-width: 620px) {
   .locale {
     padding: 0;
+    margin: 0 !important;
+    position: fixed;
+    bottom: 7%;
+    left: 50%;
+    transform: translateX(-50%);
     &__button {
       &:last-of-type {
         margin-right: $default-margin;

@@ -71,6 +71,17 @@
     align-items: center;
     margin-left: 0;
 
+    &__title {
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-size: $header-font-size-small;
+      margin: 0;
+    }
+
+    &__line {
+      display: none;
+    }
+
     &__line_hide_on_small {
       display: none;
     }
