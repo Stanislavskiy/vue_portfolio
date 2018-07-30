@@ -65,9 +65,6 @@ export default {
       this.$router.push("/");
     }
   },
-  created() {
-    this.i18n.locale = "ru";
-  },
   mounted() {
     this.$store.dispatch("initGallery");
   }
