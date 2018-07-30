@@ -15,7 +15,7 @@
     <list-view
       v-if="items" 
       class="top-nav__list-view top-nav__list-view_show_on_small font-light"
-      caption="Categories"
+      :caption="$t('topNav.categories')"
       :items="items"
       @item-click="listItemClicked"
     />

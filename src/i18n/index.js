@@ -8,6 +8,9 @@ const messages = {
     pageHome: {
       watch: "Watch portfolio"
     },
+    topNav: {
+      categories: "Categories"
+    },
     pageMenu: {
       home: "Home",
       portfolio: "Portfolio",
@@ -36,6 +39,9 @@ const messages = {
   pl: {
     pageHome: {
       watch: "zobacz portfolio"
+    },
+    topNav: {
+      categories: "Кategorie"
     },
     pageMenu: {
       home: "Główna",
@@ -66,8 +72,11 @@ const messages = {
     pageHome: {
       watch: "смотреть портфолио"
     },
+    topNav: {
+      categories: "Категории"
+    },
     pageMenu: {
-      home: "Домашняя страница",
+      home: "Домашняя",
       portfolio: "Портфолио",
       about: "Обо мне",
       contact: "Контакты",

@@ -67,7 +67,7 @@
     letter-spacing: 0.2em;
     text-decoration: none;
     text-align: center;
-    @include transition(color, 0.15s, ease-in);
+    @include transition(all, 0.15s, ease-in);
 
     &:hover {
       opacity: 1;
@@ -75,7 +75,6 @@
       // color: $black;
       color: yellow;
       transform: scale(1.1);
-      @include transition(transform, 0.15s, ease-in);
       // letter-spacing: 0.4em;
     }
 
@@ -105,15 +104,10 @@
     }
 
     &__button {
-      left: 50%;
-      // @include transition(all, 0s);
-      transform: translateX(-50%);
       position: fixed;
+      width: 100%;
+      text-align: center;
       bottom: 7%;
-
-      &:active {
-        transform: translateX(-50%);
-      }
     }
   }
 }
