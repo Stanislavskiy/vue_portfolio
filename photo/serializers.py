@@ -11,4 +11,4 @@ class CategorySerializer(ModelSerializer):
 class PhotoSerializer(ModelSerializer):
     class Meta:
         model = Photo
-        fields = ('id', 'image', 'small', 'category', 'order')
+        fields = ('id', 'image', 'category', 'order')

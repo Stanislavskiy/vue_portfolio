@@ -2,9 +2,15 @@
   <div id="pageHome" class="page-home">
     <div class="content content_align_center content_margin_0">
       <div>
-        <h1 class="page-home__title font-bold">
-          Vladislav Kruglyak
-        </h1>
+        <transition
+          appear
+          mode="in-out"
+          :duration="{enter:250, leave:500}"
+        >
+          <h1 class="page-home__title font-bold">
+            Vladislav Kruglyak
+          </h1>
+        </transition>
         <div class="page-home__description">
           <!-- <div class="content__line content__line_margin_0 content__line_hide_on_small"></div> -->
           <h3 class="font-thin">Photographer</h3>

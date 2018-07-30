@@ -44,10 +44,7 @@ export default {
   methods: {
     ...mapActions(["loadPhotos", "clearCategories", "loadCategories"]),
     imageClicked(image) {
-      const result = this.photos.find(item => {
-        return item.small === image;
-      });
-      if (result.image) this.slideImage = result.image;
+      this.slideImage = image;
     },
     checkMenu() {
       let prevScrollpos = window.pageYOffset;
