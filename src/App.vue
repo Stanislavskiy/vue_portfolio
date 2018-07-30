@@ -1,13 +1,8 @@
 <template>
   <div id="app" class="app">
-    <!-- <div class="app__video-wrapper"> -->
-      <!-- <div > -->
-        <video class="app__video" width="100%" height="auto" preload="auto" autoplay="autoplay"
-        loop="loop" poster="/static/bg.jpg">
-            <source src="/static/bg.mp4" type="video/mp4"></source>
-        </video>
-      <!-- </div> -->
-    <!-- </div> -->
+    <video class="app__video" autoplay muted loop>
+      <source src="/static/bg.mp4" type="video/mp4">
+    </video>
     <top-nav 
       :items="menuItems"
       :opened="menuOpened"

@@ -2,7 +2,6 @@
 @import "./variables";
 
 .gallery {
-  // position: relative;
   z-index: 1;
   &__item {
     display: inline-block;

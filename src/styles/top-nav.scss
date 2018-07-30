@@ -8,17 +8,15 @@
   box-sizing: border-box;
   margin-top: $default-margin;
   padding: 0 $default-margin;
-  // background: none;
   width: 100%;
   height: $top-nav-height;
   align-items: center;
   justify-content: space-between;
   color: $white;
-  // overflow: hidden;
   @include transition(all, 0.15s, ease-in);
 
   &__logo {
-    // @include no-select;
+    @include no-select;
     @include flex;
     align-items: center;
     justify-content: center;
