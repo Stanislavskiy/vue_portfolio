@@ -5,7 +5,6 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  background: "~/static/bg.jpg" no-repeat center / cover;
 
   /* important for portfolio page 
   scrolling without scrollbar */
@@ -41,5 +40,6 @@
 @media screen and (max-width: 620px) {
   .app {
     overflow-y: auto;
+    background: "~/static/bg.jpg" no-repeat center / cover;
   }
 }
