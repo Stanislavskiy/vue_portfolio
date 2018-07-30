@@ -48,18 +48,10 @@
 import ListView from "../ListView";
 
 export default {
-  data() {
-    return {
-      // activeItem: this.defaultItem
-    };
-  },
   components: {
     ListView
   },
   props: {
-    // pathName: {
-    //   default: "menu"
-    // },
     items: {
       type: Array,
       default: null

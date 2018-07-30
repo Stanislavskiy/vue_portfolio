@@ -17,7 +17,6 @@
             href="#"
             v-for="(item, i) in items"
             :key="i"
-            :class="{'top-nav__item_active': item===activeItem}"
             @click.stop="$emit('item-click', item)" 
           >
             {{item}}
