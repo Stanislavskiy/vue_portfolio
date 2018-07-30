@@ -5,12 +5,12 @@
     class="top-nav"
     @scroll="windowScroll()"
   >
-    <button 
+    <div 
       class="top-nav__logo font-semibold" 
       @click="$emit('logo-click')"
     >
     К
-    </button>
+    </div>
     <!-- small_screen -->
     <list-view
       v-if="items" 
