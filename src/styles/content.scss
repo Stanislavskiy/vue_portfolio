@@ -20,6 +20,7 @@
 
   &__title {
     text-transform: uppercase;
+    text-align: center;
     letter-spacing: 0.05em;
     font-size: $header-font-size;
     margin: 0;
@@ -88,6 +89,7 @@
 
     &__description {
       width: 86%;
+      margin: 1rem 0 0 0;
       text-align: center;
     }
   }

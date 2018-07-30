@@ -106,9 +106,14 @@
 
     &__button {
       left: 50%;
+      // @include transition(all, 0s);
       transform: translateX(-50%);
       position: fixed;
       bottom: 7%;
+
+      &:active {
+        transform: translateX(-50%);
+      }
     }
   }
 }
