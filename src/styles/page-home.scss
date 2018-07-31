@@ -35,7 +35,7 @@
   }
 
   &__button {
-    opacity: 0.4;
+    opacity: 0.5;
     position: fixed;
     bottom: 3rem;
     background: none;
@@ -57,8 +57,8 @@
 
     &:hover {
       opacity: 1;
-      color: yellow;
-      // transform: scale(1.1);
+      color: white;
+      transform: scale(1.05);
     }
 
     &:focus {

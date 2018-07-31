@@ -1,7 +1,6 @@
 <template>
   <div 
     id="topNav"
-    ref="topNav" 
     class="top-nav"
     @scroll="windowScroll()"
   >
@@ -68,6 +67,19 @@ export default {
   methods: {
     listItemClicked(item) {
       this.$emit("item-click", item);
+    },
+    animateOnStart() {
+      const topNav = document.querySelector("#topNav");
+      const animate = () => {
+        topNav.classList.add("top-nav_fade-in");
+      };
+      requestAnimationFrame(animate);
+      setTimeout(topNav.classList.remove("top-nav_fade-in"), 0);
+    }
+  },
+  mounted() {
+    if (this.$route.name === "home") {
+      this.animateOnStart();
     }
   }
 };

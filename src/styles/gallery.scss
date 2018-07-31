@@ -3,6 +3,7 @@
 
 .gallery {
   z-index: 1;
+  @include fade-in(1s);
   &__item {
     display: inline-block;
     width: 25%;
