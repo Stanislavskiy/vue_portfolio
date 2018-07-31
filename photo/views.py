@@ -18,8 +18,8 @@ class PhotoWiewSet(ReadOnlyModelViewSet):
         Получить страницу по аттрибуту "url"
         """
         category_name = request.GET.get('category')
-        category = get_object_or_404(Category, name=category_name)
-        if category.name == "all":
+        category = get_object_or_404(Category, en=category_name)
+        if category.en == "all":
             photos = Photo.objects.order_by('?')
         else:
             photos = Photo.objects.filter(category=category)

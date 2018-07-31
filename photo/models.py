@@ -18,6 +18,10 @@ class Category(models.Model):
         verbose_name="Название категории (польск.)", max_length=50, blank=False)
 
     def __str__(self):
+        return self.name
+
+    @property
+    def name(self):
         return self.en
 
 

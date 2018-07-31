@@ -44,7 +44,11 @@ export default {
     ...mapActions(["loadPhotos"]),
 
     menuItemClicked(name) {
-      this.loadPhotos(name);
+      const findItem = this.categories.find(item => {
+        if (name === item.en || name === item.ru || name === item.pl)
+          return true;
+      });
+      this.loadPhotos(findItem.en);
       this.menuActiveItem = name;
     },
 
