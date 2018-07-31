@@ -4,7 +4,7 @@
         <!-- <transition name="fade"> -->
         <router-link 
           :to="{name: 'home'}"
-          class="page-menu__item font-light font-light_hover_bold"
+          class="page-menu__item font-regular font-light_hover_bold"
           tag="button"
         >
           {{$t("pageMenu.home")}}
@@ -12,28 +12,28 @@
         <!-- </transition> -->
         <router-link 
           :to="{name: 'portfolio'}"
-          class="page-menu__item font-light font-light_hover_bold"
+          class="page-menu__item font-regular font-light_hover_bold"
           tag="button"
         >
           {{$t("pageMenu.portfolio")}}
         </router-link>
         <router-link 
           :to="{name: 'about'}"
-          class="page-menu__item font-light font-light_hover_bold"
+          class="page-menu__item font-regular font-light_hover_bold"
           tag="button"
         >
           {{$t("pageMenu.about")}}
         </router-link>
         <router-link 
           :to="{name: 'contact'}"
-          class="page-menu__item font-light font-light_hover_bold"
+          class="page-menu__item font-regular font-light_hover_bold"
           tag="button"
         >
           {{$t("pageMenu.contact")}}
         </router-link>
         <router-link 
           :to="{name: 'site'}"
-          class="page-menu__item font-light font-light_hover_bold"
+          class="page-menu__item font-regular font-light_hover_bold"
           tag="button"
         >
           {{$t("pageMenu.website")}}

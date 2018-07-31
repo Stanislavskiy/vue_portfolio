@@ -8,34 +8,30 @@
     margin-left: $default-margin;
     width: 1.5rem;
     height: 1.5rem;
+    color: $white;
+    @include flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    text-decoration: none;
     @include transition(all, 0.15s, ease-in);
 
     &:last-of-type {
       margin-right: $default-margin/6;
     }
-
-    &_icon_facebook {
-      background: url("~/assets/facebook.png") no-repeat center / cover;
+    &:nth-last-child(1) {
+      @include fade-in(0.5s);
     }
 
-    &_icon_facebook:hover {
-      background: url("~/assets/facebook-active.png");
+    &:nth-last-child(2) {
+      @include fade-in(0.5s, 0.15s);
     }
 
-    &_icon_instagram {
-      background: url("~/assets/instagram.png") no-repeat center / cover;
+    &:nth-last-child(3) {
+      @include fade-in(0.5s, 0.3s);
     }
 
-    &_icon_instagram:hover {
-      background: url("~/assets/instagram-active.png");
-    }
-
-    &_icon_vk {
-      background: url("~/assets/vk.png") no-repeat center / cover;
-    }
-
-    &_icon_vk:hover {
-      background: url("~/assets/vk-active.png");
+    &:hover {
+      color: $yellow;
     }
   }
 }

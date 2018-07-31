@@ -1,3 +1,5 @@
+@import "./animation";
+
 @mixin flex {
   display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
   display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
@@ -11,6 +13,13 @@
   -moz-transition: $property $duration $ease;
   -o-transition: $property $duration $ease;
   transition: $property $duration $ease;
+}
+@mixin fade-in($duration: 1s, $delay: 0s) {
+  animation: fade-in $duration ease-in-out;
+  animation-delay: $delay;
+  animation-fill-mode: forwards;
+  opacity: 0;
+  animation-iteration-count: 1;
 }
 
 @mixin no-select {

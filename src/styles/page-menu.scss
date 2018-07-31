@@ -13,8 +13,8 @@
     cursor: pointer;
     display: inline-block;
     text-decoration: none;
-    font-size: 1.5rem;
-    letter-spacing: 0.025em;
+    font-size: 1.125rem;
+    letter-spacing: 0.05em;
     color: $white;
     cursor: pointer;
     @include transition(all, 0.15s, ease-in);
@@ -30,6 +30,26 @@
     &:hover {
       color: $yellow;
       letter-spacing: 0.075em;
+    }
+
+    &:nth-child(1) {
+      @include fade-in(0.5s);
+    }
+
+    &:nth-child(2) {
+      @include fade-in(0.5s, 0.05s);
+    }
+
+    &:nth-child(3) {
+      @include fade-in(0.5s, 0.2s);
+    }
+
+    &:nth-child(4) {
+      @include fade-in(0.5s, 0.15s);
+    }
+
+    &:nth-child(5) {
+      @include fade-in(0.5s, 0.2s);
     }
   }
 }

@@ -1,8 +1,26 @@
 <template>
   <div id="social" class="social footer font-thin">
-    <a href="#" class="social__button social__button_icon_facebook"></a>
-    <a href="#" class="social__button social__button_icon_instagram"></a>
-    <a href="#" class="social__button social__button_icon_vk"></a>
+    <a 
+      href="https://www.facebook.com/profile.php?id=100001287220892"
+      target="_blank" 
+      class="social__button"
+    >
+      <i class="fab fa-facebook-f"></i>
+    </a>
+    <a 
+      href="https://vk.com/id364499379"
+      target="_blank" 
+      class="social__button"
+    >
+      <i class="fab fa-vk"></i>
+    </a>
+    <a
+      href="https://www.instagram.com/vlad_photographer" 
+      target="_blank"
+      class="social__button"
+    >
+      <i class="fab fa-instagram"></i>
+    </a>
   </div>
 </template>
 

@@ -6,21 +6,38 @@
     background: none;
     border: none;
     cursor: pointer;
-    color: $white;
+    color: rgba($white, 0.55);
     text-decoration: none;
     margin-left: $default-margin;
-    font-size: 0.875rem;
+    font-size: 0.75rem;
+    @include transition(all, 0.15s, ease-in);
 
     &:last-of-type {
-      margin-right: $default-margin/2;
+      margin-right: $default-margin/6;
     }
 
     &:focus {
       outline: none;
     }
 
-    &_active {
+    &:hover {
       color: $yellow;
+    }
+
+    &:nth-last-child(1) {
+      @include fade-in(0.5s);
+    }
+
+    &:nth-last-child(2) {
+      @include fade-in(0.5s, 0.15s);
+    }
+
+    &:nth-last-child(3) {
+      @include fade-in(0.5s, 0.3s);
+    }
+
+    &_active {
+      color: $white;
     }
   }
 }
