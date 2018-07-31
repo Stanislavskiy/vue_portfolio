@@ -10,11 +10,15 @@ from django.core.files.uploadedfile import InMemoryUploadedFile
 
 
 class Category(models.Model):
-    name = models.CharField(
-        verbose_name="Название категории", max_length=50, blank=False)
+    en = models.CharField(
+        verbose_name="Название категории (англ.)", max_length=50, blank=False)
+    ru = models.CharField(
+        verbose_name="Название категории (рус.)", max_length=50, blank=False)
+    pl = models.CharField(
+        verbose_name="Название категории (польск.)", max_length=50, blank=False)
 
     def __str__(self):
-        return self.name
+        return self.en
 
 
 class Photo(models.Model):

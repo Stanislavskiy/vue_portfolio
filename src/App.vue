@@ -4,7 +4,7 @@
       <source src="/static/bg.mp4" type="video/mp4">
     </video>
     <top-nav 
-      :items="menuItems"
+      :items="localizedMenuItems"
       :opened="menuOpened"
       :activeItem="menuActiveItem"
       @item-click="menuItemClicked"
@@ -32,10 +32,10 @@ export default {
   components: { TopNav },
   computed: {
     ...mapGetters(["categories", "menuOpened"]),
-    menuItems: function() {
+    localizedMenuItems: function() {
       if (this.categories) {
         return this.categories.map(item => {
-          return item.name;
+          return item[this.$i18n.locale];
         });
       }
     }
