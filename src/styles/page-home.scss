@@ -15,7 +15,7 @@
     font-size: 1.7rem;
     text-transform: uppercase;
     letter-spacing: 0.4em;
-    @include fade-in(1s);
+    @include fade-in(1s, 1s);
   }
 
   &__description {

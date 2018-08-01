@@ -77,6 +77,11 @@ export default {
       setTimeout(topNav.classList.remove("top-nav_fade-in"), 0);
     }
   },
+  created() {
+    if (this.$route.name === "home") {
+      document.querySelector("#topNav").style.opacity = "0";
+    }
+  },
   mounted() {
     if (this.$route.name === "home") {
       this.animateOnStart();
