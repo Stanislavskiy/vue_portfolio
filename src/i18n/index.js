@@ -80,7 +80,7 @@ const messages = {
       portfolio: "Портфолио",
       about: "Обо мне",
       contact: "Контакты",
-      website: "Вебсайт"
+      website: "Веб-сайт"
     },
     pageAbout: {
       title: "Обо мне",
@@ -93,7 +93,7 @@ const messages = {
       email: "E-mail"
     },
     pageSite: {
-      title: "Вебсайт",
+      title: "Веб-сайт",
       development: "Автор сайта",
       video: "Видео обработка",
       developer: "Станиславский Александр",
