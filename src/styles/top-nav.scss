@@ -15,6 +15,10 @@
   color: $white;
   @include transition(all, 0.15s, ease-in);
 
+  &_opacity_0 {
+    opacity: 0;
+  }
+
   &_fade-in {
     @include fade-in(1s, $secondary-animation-timing);
   }

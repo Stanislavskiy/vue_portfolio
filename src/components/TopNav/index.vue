@@ -1,8 +1,12 @@
 <template>
   <div 
     id="topNav"
-    class="top-nav"
+    :class="{
+      'top-nav':true, 
+      'top-nav_opacity_0': isHomePage
+    }"
     @scroll="windowScroll()"
+    ref="topNav"
   >
     <div 
       class="top-nav__logo font-semibold" 
@@ -64,22 +68,22 @@ export default {
       default: false
     }
   },
+  computed: {
+    isHomePage: function() {
+      return this.$route.name === "home";
+    }
+  },
   methods: {
     listItemClicked(item) {
       this.$emit("item-click", item);
     },
     animateOnStart() {
-      const topNav = document.querySelector("#topNav");
+      const topNav = this.$refs["topNav"];
       const animate = () => {
         topNav.classList.add("top-nav_fade-in");
       };
       requestAnimationFrame(animate);
       setTimeout(topNav.classList.remove("top-nav_fade-in"), 0);
-    }
-  },
-  created() {
-    if (this.$route.name === "home") {
-      document.querySelector("#topNav").style.opacity = "0";
     }
   },
   mounted() {
