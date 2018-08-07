@@ -1,5 +1,5 @@
 <template>
-  <div id="app" class="app">
+  <div id="app" class="app" ref="app">
     <video class="app__video" autoplay muted loop>
       <source src="/static/bg.mp4" type="video/mp4">
     </video>
@@ -62,10 +62,20 @@ export default {
 
     menuLogoClicked() {
       this.$router.push("/");
+    },
+
+    animateBlackout() {
+      const app = this.$refs["app"]
+      const animate = () => {
+        app.classList.add("app_blackout")
+      }
+      requestAnimationFrame(animate)
+      this.$nextTick(app.classList.remove("app_blackout"))
     }
   },
   mounted() {
     this.$store.dispatch("initGallery");
+    this.animateBlackout()
   }
 };
 </script>

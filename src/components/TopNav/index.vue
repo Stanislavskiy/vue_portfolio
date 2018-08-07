@@ -87,9 +87,9 @@ export default {
     }
   },
   mounted() {
-    if (this.$route.name === "home") {
-      this.animateOnStart();
-    }
+    // if (this.$route.name === "home") {
+    //   this.animateOnStart();
+    // }
   }
 };
 </script>

@@ -4,6 +4,10 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  
+  &_blackout {
+    animation: blackout 1s ease-in-out;
+  }
 
   /* important for portfolio page 
   scrolling without scrollbar */
@@ -40,9 +44,19 @@
   .app {
     overflow-y: auto;
     background: #000000;
+    animation: none;
 
     &__video {
       display: none !important;
     }
+  }
+}
+
+@keyframes blackout {
+  0%{
+    background: #000000
+  }
+  100%{
+    background: none
   }
 }

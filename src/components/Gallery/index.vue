@@ -34,7 +34,7 @@ export default {
     }
   },
   updated: function() {
-    this.$redrawVueMasonry();
+   requestAnimationFrame(this.$redrawVueMasonry.bind(this))
   }
 };
 </script>
